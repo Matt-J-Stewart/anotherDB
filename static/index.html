@@ -23,8 +23,10 @@ Additional application functionality includes:<br />
 
 
     <script>
-        function fetchHistory() {
-            alert("Hello");
+        async function fetchHistory() {
+            const response = await fetch("/history");
+            const responseText = await response.text();
+            document.getElementById("fetchName").innerHTML = responseText;
         }
     </script>
 </body>

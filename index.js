@@ -13,6 +13,13 @@ app.use(express.static(__dirname + '/static'))
 
 // The app.get functions below are being processed in Node.js running on the server.
 // Implement a custom About page.
+
+app.get('/history', async (request, response) => {
+	response.send("Hello");
+})
+
+
+
 app.get('/about', (request, response) => {
 	console.log('Calling "/about" on the Node.js server.')
 	response.type('text/plain')
