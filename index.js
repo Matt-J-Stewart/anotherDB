@@ -1,10 +1,11 @@
 const express = require('express')
 app = express()
-//var dt2 = require('./dbSearch');
+
 
 var url = require('url');
 const { getEnvironmentData } = require('worker_threads');
 var dt = require('./date-time');
+var mattFunc = require('./dbSearch');
 
 const port = process.env.PORT || 3000
 const majorVersion = 1
@@ -17,7 +18,8 @@ app.use(express.static(__dirname + '/static'))
 // Implement a custom About page.
 
 app.get('/history', async (request, response) => {
-	response.send("WHATS UP")
+	let testVar = mattFunc();
+	response.send(testVar);
 })
 
 
