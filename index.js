@@ -1,5 +1,6 @@
 const express = require('express')
 app = express()
+const getData = require('./dbSearch.js');
 
 var url = require('url');
 var dt = require('./date-time');
@@ -15,7 +16,7 @@ app.use(express.static(__dirname + '/static'))
 // Implement a custom About page.
 
 app.get('/history', async (request, response) => {
-	response.send("Hello");
+	response.send("BYE");
 })
 
 
