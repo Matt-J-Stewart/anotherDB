@@ -7,7 +7,7 @@ const DATABASE_NAME = 'Quiz-Capstone'
 const dbName = "mattDB"
 const connectURL = "mongodb+srv://matthewjstewart:Sn3akySnak3@mattdb.jyd3q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-exports.getData = function() {
+exports.getData = function(testP, callback) {
     MongoClient.connect(connectURL, async function(error,client) {
         var database = client.db(DATABASE_NAME);
         var collection = database.collection("Quiz");
@@ -15,7 +15,7 @@ exports.getData = function() {
         var allVals = await cursor.toArray();
         var testVar = allVals[0];
         client.close();
-        console.log(chalk.red(testP))
+        console.log(testP)
         callback(testVar);
     });
 };
