@@ -25,7 +25,5 @@ function getData(testP, callback) {
    
   
 
-module.exports = {
-    getData: getData
-};
+exports.getData();
 
