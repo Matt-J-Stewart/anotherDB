@@ -1,6 +1,6 @@
 const express = require('express')
 app = express()
-const getData = require('./dbSearch.js');
+//const getData = require('./dbSearch.js');
 
 var url = require('url');
 var dt = require('./date-time');
