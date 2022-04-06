@@ -1,6 +1,6 @@
 const express = require('express')
 app = express()
-var dt2 = require('./dbSearch');
+//var dt2 = require('./dbSearch');
 
 var url = require('url');
 const { getEnvironmentData } = require('worker_threads');

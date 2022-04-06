@@ -1,5 +1,4 @@
 const { response } = require("express");
-const chalk = require('chalk');
 
 
 const MongoClient = require("mongodb").MongoClient;
