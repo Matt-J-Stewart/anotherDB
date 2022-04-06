@@ -18,8 +18,9 @@ app.use(express.static(__dirname + '/static'))
 // Implement a custom About page.
 
 app.get('/history', async (request, response) => {
-	let testVar = mattFunc.getData();
-	response.send(testVar);
+	mattFunc.getData("HST01", function(obj1) {
+		response.send(obj1);
+	});
 })
 
 
