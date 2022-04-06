@@ -1,8 +1,9 @@
 const express = require('express')
 app = express()
-//const getData = require('./dbSearch.js');
+var getData = require('./dbSearch');
 
 var url = require('url');
+const { getEnvironmentData } = require('worker_threads');
 var dt = require('./date-time');
 
 const port = process.env.PORT || 3000
@@ -16,7 +17,7 @@ app.use(express.static(__dirname + '/static'))
 // Implement a custom About page.
 
 app.get('/history', async (request, response) => {
-	response.send("BYE");
+	response.send("WHATS UP")
 })
 
 
